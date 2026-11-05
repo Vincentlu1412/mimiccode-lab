@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="通过模仿、补全和重写，真正学会 LeetCode 解题套路。支持 Python 和 C++。" />
+  <meta name="theme-color" content="#17221d" />
+  <title>仿写式刷题实验室</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MIMIC → COMPLETE → REBUILD</p>
+        <h1>仿写式刷题实验室</h1>
+        <p class="subtitle">边看边写，边改边懂。每道题只学一个套路，马上动手。</p>
+      </div>
+      <div class="streak"><span id="doneCount">0</span><small> 今日完成</small></div>
+    </header>
+
+    <section class="steps" aria-label="学习流程">
+      <div class="step active"><b>01</b><span>看懂套路</span></div>
+      <div class="line"></div>
+      <div class="step"><b>02</b><span>补全代码</span></div>
+      <div class="line"></div>
+      <div class="step"><b>03</b><span>自己重写</span></div>
+    </section>
+
+    <section class="grid">
+      <aside class="sidebar">
+        <div class="side-title">今天练什么</div>
+        <div id="problemList"></div>
+        <div class="rule"></div>
+        <p class="tip"><strong>使用规则</strong><br>先读左侧提示，再补代码。卡住时只看下一条提示，不要直接看完整答案。</p>
+      </aside>
+
+      <article class="workspace">
+        <div class="problem-head">
+          <div>
+            <span id="tag" class="tag">哈希表</span>
+            <h2 id="title">两数之和</h2>
+            <p id="description">给定一个整数数组 nums 和目标值 target，请找出和为目标值的两个数的下标。</p>
+          </div>
+          <button id="resetBtn" class="ghost">重置本题</button>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-label">模仿对象</div>
+          <p id="principle">一边遍历，一边把已经见过的数字放进哈希表；当前数字需要的另一个数是 <code>target - x</code>。</p>
+          <div id="hints" class="hints"></div>
+        </div>
+
+        <div class="editor-wrap">
+          <div class="editor-top"><span>你的代码</span><div><button class="lang active" data-lang="python">Python</button><button class="lang" data-lang="cpp">C++</button></div></div>
+          <textarea id="editor" spellcheck="false" aria-label="代码编辑器"></textarea>
+          <div class="editor-actions"><button id="hintBtn" class="secondary">给我下一条提示</button><button id="runBtn" class="primary">运行检查</button></div>
+        </div>
+
+        <div id="feedback" class="feedback hidden"></div>
+        <div class="rebuild" id="rebuildBox">
+          <div><span class="lesson-label">最后一步</span><h3>合上提示，自己写一遍</h3><p>不追求一次 AC，只要能说清楚：数据放在哪里？什么时候查？什么时候存？</p></div>
+          <button id="rebuildBtn" class="secondary">开始重写</button>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
