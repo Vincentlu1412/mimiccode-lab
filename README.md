@@ -30,8 +30,9 @@ MimicCode Lab 把一道题拆成三个动作：
 页面现在提供四条路线地图：
 
 - **经典算法**：从数组、链表、树、图到动态规划
-- **深度学习**：从 Tensor、反向传播到 Transformer Block
-- **大模型**：从 Tokenizer、Attention 到 KV Cache、RAG
+- **深度学习**：从 Tensor、反向传播、CNN、RNN 到 Transformer Block
+- **大模型**：从 Tokenizer、Attention、MoE 到 KV Cache、RAG
+- **生成模型**：从 Diffusion、U-Net、噪声调度到 Flow Matching 和 ODE 采样
 - **Agent 工程**：从结构化输出、工具调用到状态、重试和评测
 
 目前算法区有可交互的示例题，其余路线先提供循序渐进的练习地图。后续会逐个补成带测试用例的代码实验，不把“看过概念”冒充成“已经掌握”。

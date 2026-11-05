@@ -1,7 +1,8 @@
 const tracks=[
   {icon:'⌘',name:'经典算法',tone:'green',goal:'建立可迁移的解题套路',items:['数组与哈希','双指针与滑动窗口','栈、队列与单调栈','链表与递归','二叉树 DFS / BFS','堆与优先队列','二分与排序','回溯与剪枝','图搜索与并查集','动态规划'],next:'合并区间、岛屿数量、零钱兑换、LRU 缓存'},
-  {icon:'◒',name:'深度学习',tone:'blue',goal:'从张量操作写到训练循环',items:['Tensor 与广播','线性回归与梯度下降','反向传播','Dataset / DataLoader','PyTorch 训练循环','注意力机制','Transformer Block','过拟合与评估'],next:'手写 MLP、实现 mini-batch、补全 scaled dot-product attention'},
-  {icon:'✦',name:'大模型',tone:'purple',goal:'理解并实现 LLM 的关键组件',items:['Tokenizer 与词表','Embedding 查表','Self-Attention','KV Cache','采样与 Temperature','LoRA 思路','RAG 检索流程','评测与幻觉分析'],next:'实现 top-k sampling、补全一个最小 RAG pipeline'},
+  {icon:'◒',name:'深度学习',tone:'blue',goal:'从张量操作写到训练循环',items:['Tensor 与广播','线性回归与梯度下降','反向传播','CNN 卷积网络','RNN / LSTM','Dataset / DataLoader','PyTorch 训练循环','Transformer Block','过拟合与评估'],next:'手写 CNN、补全 RNN hidden state、实现一个可训练 mini-batch'},
+  {icon:'✦',name:'大模型',tone:'purple',goal:'理解并实现生成模型的关键组件',items:['Tokenizer 与词表','Embedding 查表','Self-Attention','KV Cache','MoE 路由与负载均衡','采样与 Temperature','LoRA 思路','RAG 检索流程','评测与幻觉分析'],next:'实现 top-k sampling、补全 MoE router、实现一个最小 RAG pipeline'},
+  {icon:'◌',name:'生成模型',tone:'purple',goal:'从噪声到样本，理解生成过程',items:['VAE 基础','Diffusion 前向加噪','反向去噪与 U-Net','噪声调度器','Classifier-free guidance','Flow Matching 目标','ODE 采样','生成质量评估'],next:'手写 DDPM noise schedule、补全 flow matching loss、实现 Euler sampler'},
   {icon:'↗',name:'Agent 工程',tone:'orange',goal:'把模型接进可靠的工具循环',items:['结构化输出','Tool schema 设计','调用—观察—再调用循环','重试与超时','状态与记忆','Planner / Executor','RAG Agent','Tracing 与评测'],next:'实现带工具调用、重试和最大步数的 Agent loop'}
 ];
 const trackCards=document.querySelector('#trackCards');
