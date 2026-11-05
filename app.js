@@ -1,4 +1,4 @@
-const problems=[...baseProblems,...extraProblems];
+const problems=[...baseProblems,...classicBank,...extraProblems];
 let current=0,lang='python',hintIndex=0,rebuildLogged=false,done=Number(localStorage.mimicDone||0);const $=s=>document.querySelector(s);
 function renderList(){ $('#problemList').innerHTML=problems.map((p,i)=>`<div class="problem ${i===current?'selected':''}" data-i="${i}"><small>${String(i+1).padStart(2,'0')} · ${p.tag}</small><strong>${p.title}</strong></div>`).join('');document.querySelectorAll('.problem').forEach(x=>x.onclick=()=>{current=+x.dataset.i;hintIndex=0;render()})}
 function render(){const p=problems[current];hintIndex=0;rebuildLogged=false;$('#tag').textContent=p.tag;$('#title').textContent=p.title;$('#description').textContent=p.desc;$('#principle').textContent=p.principle;$('#hints').innerHTML='';$('#editor').value=p[lang];$('#feedback').className='feedback hidden';renderList();document.querySelectorAll('.step').forEach((x,i)=>x.classList.toggle('active',i===0))}
